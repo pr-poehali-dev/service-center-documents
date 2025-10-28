@@ -200,7 +200,7 @@ const OrderEditor = ({ order, masters, isCreating, onSave, onCancel }: OrderEdit
 
           <div className="space-y-2">
             <Label htmlFor="status">Статус</Label>
-            <Select value={formData.status} onValueChange={(value: any) => setFormData({ ...formData, status: value })}>
+            <Select value={formData.status} onValueChange={(value) => setFormData({ ...formData, status: value as 'pending' | 'in_progress' | 'completed' })}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
